@@ -1,7 +1,7 @@
 <mat-toolbar>
   <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu" (click)="drawer.toggle()"></mat-icon>
 
-  <span>Connect4</span> <a [href]="githubLink" target="_blank">
+  <span>{{title}}</span> <a [href]="githubLink" target="_blank">
     <mat-icon class="fa" color="primary" fontSet="fa" fontIcon="fa-github"></mat-icon>
 </a>
 </mat-toolbar>
@@ -22,6 +22,14 @@
         color="primary"
         [routerLink]="['swagger']"
       >Swagger</a>
+      <div *ngFor="let link of related_links | keyvalue">
+        <a
+        mat-raised-button
+        color="primary"
+        href="{{link.value}}"
+        target="_blank"
+      >{{ link.key }}</a>
+      </div>
     </div>
   </mat-drawer>
   <router-outlet></router-outlet>

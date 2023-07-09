@@ -6,16 +6,20 @@ import { GameService } from 'src/services';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   githubLink = ""
+  title = ""
+  related_links: { [key: string]: string; } = {};
 
-  constructor(private service: GameService){}
+  constructor(private service: GameService) { }
   ngOnInit(): void {
     this.service.getConfiguration().subscribe(data => {
-    this.githubLink = data.github_url},
-    error => {
-      console.error('Failed to fetch Connect 4 configuration', error);
-    })
+      this.githubLink = data.github_url
+      this.title = data.title
+      this.related_links = data.related_links
+    },
+      error => {
+        console.error('Failed to fetch Connect 4 configuration', error);
+      })
   }
-  title = 'connect4';
 }

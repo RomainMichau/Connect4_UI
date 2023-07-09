@@ -13,5 +13,7 @@
 
 export interface ConfigurationBody { 
     github_url: string;
+    related_links: { [key: string]: string; };
+    title: string;
 }
 

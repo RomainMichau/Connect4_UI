@@ -1,9 +1,7 @@
 <mat-toolbar>
   <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu" (click)="drawer.toggle()"></mat-icon>
 
-  <span>{{title}}</span> <a [href]="githubLink" target="_blank">
-    <mat-icon class="fa" color="primary" fontSet="fa" fontIcon="fa-github"></mat-icon>
-</a>
+  <span>{{title}}</span>
 </mat-toolbar>
 <div class="mat-app-background">
 
@@ -12,23 +10,12 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
     <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="20px" class="with-nav-margin">
-      <a
-        mat-raised-button
-        color="primary"
-        [routerLink]="['/']"
-      >Game</a>
-      <a
-        mat-raised-button
-        color="primary"
-        [routerLink]="['swagger']"
-      >Swagger</a>
+      <a mat-raised-button color="primary" [routerLink]="['/']">Game</a>
+      <a mat-raised-button color="primary" [routerLink]="['swagger']">Swagger</a>
+      <a mat-raised-button color="primary" [href]="githubLink" target="_blank"><mat-icon class="fa"  fontSet="fa"
+          fontIcon="fa-github"></mat-icon>Source</a>
       <div *ngFor="let link of related_links | keyvalue">
-        <a
-        mat-raised-button
-        color="primary"
-        href="{{link.value}}"
-        target="_blank"
-      >{{ link.key }}</a>
+        <a mat-raised-button color="primary" href="{{link.value}}" target="_blank">{{ link.key }}</a>
       </div>
     </div>
   </mat-drawer>

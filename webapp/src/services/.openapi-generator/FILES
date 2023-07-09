@@ -9,6 +9,7 @@ git_push.sh
 index.ts
 model/addTokenResponseBody.ts
 model/badRequestErrorBody.ts
+model/configurationBody.ts
 model/getGridResponseBody.ts
 model/miniMaxiResponseBody.ts
 model/models.ts

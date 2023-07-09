@@ -8,7 +8,7 @@ declare const SwaggerUIBundle: any;
 export class SwaggerUIComponent {
   ngOnInit() {
     const ui = SwaggerUIBundle({
-      url: `${window.location.origin}/swagger.json`,
+      url: `${window.location.origin}/api/swagger.json`,
       dom_id: '#swagger-ui',
       presets: [
         SwaggerUIBundle.presets.apis,

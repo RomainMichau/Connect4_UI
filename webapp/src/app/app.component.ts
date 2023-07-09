@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
     this.service.getConfiguration().subscribe(data => {
     this.githubLink = data.github_url},
     error => {
-      console.error('Failed to fetch Connect 4 grid data', error);
+      console.error('Failed to fetch Connect 4 configuration', error);
     })
   }
   title = 'connect4';

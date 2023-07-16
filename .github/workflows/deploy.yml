@@ -12,4 +12,4 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: RomainMichau/rokim_conf
           event-type: trigger-deploy
-          client-payload: '{"tag": "connect4_webapp"}'
+          client-payload: '{"tag": "connect4_webapp", "source":"https://github.com/RomainMichau/Connect4_UI"}'

@@ -17,6 +17,7 @@ export class Connect4GridComponent implements OnInit {
   lastAiMove: number = -1;
   history: GameHistory[] = []
   columnScores: number[] = [];
+  help = ""
   cellTypes: CellType[] = [new CellType(0, "white", "cell-empty"),
     new CellType(1, '#ffd500', "cell-yellow"),
     new CellType(2, 'red', "cell-red")]
@@ -30,6 +31,8 @@ export class Connect4GridComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.getConfiguration().subscribe(data =>
+      this.help = data.help)
     this.service.getGrid().subscribe(data => {
         this.connect4Grid = data.grid;
         this.currentPlayer = this.players[data.current_player_color];

@@ -21,6 +21,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatInputModule} from "@angular/material/input";
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import {MatInputModule} from "@angular/material/input";
     MatTableModule,
     MatToolbarModule,
     MatInputModule,
+    MatButtonModule, 
+    MatTooltipModule,
     ApiModule.forRoot(() => {
       return new Configuration({
         basePath: ``,

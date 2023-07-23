@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from 'src/services';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

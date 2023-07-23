@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {GameService} from "../../services";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-connect4-grid',

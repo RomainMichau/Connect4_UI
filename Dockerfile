@@ -8,8 +8,6 @@ RUN npm install
 
 RUN npm run build
 
-# Serve Application using Nginx Server
-
 FROM nginx:alpine
 
 COPY --from=build /webapp/dist/connect4/ /usr/share/nginx/html

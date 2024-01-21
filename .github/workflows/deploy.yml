@@ -7,9 +7,6 @@ name: Demo Push
 # - A pull request is created or updated
 on:
   push:
-    branches:
-      - master
-      - seed
     tags:
       - v*
   pull_request:
